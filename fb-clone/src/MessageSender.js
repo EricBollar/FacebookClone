@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./MessageSender.css";
 
 import { Avatar } from "@mui/material";
@@ -6,9 +6,14 @@ import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 
 function MessageSender() {
+	const [input, setInput] = useState("");
+	const [imageUrl, setImageUrl] = useState("");
 
 	const handleSubmit = e => {
 		e.preventDefault(); // No Page Refresh
+
+		setInput("");
+		setImageUrl("");
 	}
 
 	return (
@@ -16,8 +21,8 @@ function MessageSender() {
 			<div className="messageSender__top">
 				<Avatar />	
 				<form>
-					<input className="messageSender__input" placeholder={`What's on your mind?`} type="text"/>
-					<input placeholder="Image URL (Optional)" type="text"/>
+					<input value={input} onChange={(e) => setInput(e.target.value)} className="messageSender__input" placeholder={`What's on your mind?`} type="text"/>
+					<input value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} placeholder="Image URL (Optional)" type="text"/>
 
 					<button onClick={handleSubmit} type="submit">Hidden Submit</button>
 				</form>
