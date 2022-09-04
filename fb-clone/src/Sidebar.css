@@ -19,3 +19,8 @@
 	font-size: xx-large;
 	color: #2e81f4;
 }
+
+.sidebar {
+	padding: 25px 10px;
+	flex: 0.33;
+}
