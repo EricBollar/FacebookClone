@@ -1,0 +1,26 @@
+.widgets__option {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.widgets__option:hover {
+	background-color: lightgray;
+	border-radius: 10px;
+}
+
+.widgets__option > h4 {
+	margin-right: 10px;
+	font-weight: 600;
+}
+
+.widgets__option > .MuiSvgIcon-root {
+	font-size: xx-large;
+	color: #2e81f4;
+}
+
+.widgets {
+	padding: 25px 10px;
+	flex: 0.33;
+}
