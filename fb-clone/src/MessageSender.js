@@ -4,8 +4,11 @@ import "./MessageSender.css";
 import { Avatar } from "@mui/material";
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
+import { useStateValue } from './StateProvider';
 
 function MessageSender() {
+	
+	const [{ user }, dispatch] = useStateValue();
 	const [input, setInput] = useState("");
 	const [imageUrl, setImageUrl] = useState("");
 
@@ -19,9 +22,9 @@ function MessageSender() {
 	return (
 		<div className="messageSender">
 			<div className="messageSender__top">
-				<Avatar />	
+				<Avatar src={user.photoURL}/>	
 				<form>
-					<input value={input} onChange={(e) => setInput(e.target.value)} className="messageSender__input" placeholder={`What's on your mind?`} type="text"/>
+					<input value={input} onChange={(e) => setInput(e.target.value)} className="messageSender__input" placeholder={`What's on your mind, ${user.displayName}?`} type="text"/>
 					<input value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} placeholder="Image URL (Optional)" type="text"/>
 
 					<button onClick={handleSubmit} type="submit">Hidden Submit</button>
