@@ -5,3 +5,8 @@
 .app {
 	background-color: #f1f2f5;
 }
+
+a { /* Removes Default HTML Link styling */
+	text-decoration: none;
+	color: inherit;
+}
