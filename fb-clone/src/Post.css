@@ -39,6 +39,7 @@
 .post__options {
 	padding-top: 10px;
 	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
 	display: flex;
 	justify-content: space-evenly;
 	font-size: medium;
@@ -62,4 +63,31 @@
 .post__option:hover {
 	background-color: #eff2f5;
 	border-radius: 10px;
+}
+
+.post__option--active > p {
+	color: #2e81f4;
+}
+
+.post__option--active > .MuiSvgIcon-root {
+	color: #2e81f4;
+}
+
+.post__options > form {
+	flex: 1;
+	display: flex;
+}
+
+.post__options > form > input {
+	outline-width: 0;
+	border: none;
+	padding: 5px 20px;
+	margin: 0 10px;
+	width: 100%;
+	border-radius: 99px;
+	background-color: #eff2f5;
+}
+
+.post__options > form > button {
+	display: none;
 }

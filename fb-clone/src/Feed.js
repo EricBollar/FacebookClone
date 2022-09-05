@@ -23,11 +23,13 @@ function Feed() {
 			{posts.map(post => (
 				<Post
 					key={post.data.id}
+					postID = {post.id}
 					profilePic={post.data.profilePic}
 					message={post.data.message}
 					timestamp={post.data.timestamp}
 					username={post.data.username}
 					image={post.data.image}
+					likedby={post.data.likedby} // Don't think this is best way to do this
 				/>
 			))}
 		</div>

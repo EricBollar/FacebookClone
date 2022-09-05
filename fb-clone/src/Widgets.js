@@ -5,15 +5,15 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { Avatar } from '@mui/material';
 
 function Widgets() {
 	return (
 		<div className="widgets">
-			<h4>About Me</h4>
 			<a href="https://www.ericbollar.com" target="_blank">
 				<div className="widgets__option">
-					<h4>My Website</h4>
-					<OpenInNewIcon />
+					<h4>My Website!</h4>
+					<Avatar src="https://www.ericbollar.com/images/fishpic.png" />
 				</div>
 			</a>
 			<a href="https://www.linkedin.com/in/eric-bollar/" target="_blank">
