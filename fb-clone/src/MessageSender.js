@@ -44,7 +44,7 @@ function MessageSender() {
 					<button onClick={handleSubmit} type="submit">Hidden Submit</button>
 				</form>
 			</div>
-			<div className="messageSender__bottom">
+		{/*	<div className="messageSender__bottom">
 				<div className="messageSender__option">
 					<PhotoLibraryIcon style={{ color: "green" }} />
 					<h3>Photo/Video</h3>
@@ -54,6 +54,7 @@ function MessageSender() {
 					<h3>Feeling/Activity</h3>
 				</div>
 			</div>
+			*/}
 		</div>
 	)
 }

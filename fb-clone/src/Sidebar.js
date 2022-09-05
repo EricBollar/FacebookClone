@@ -19,6 +19,7 @@ function Sidebar() {
 			<SidebarRow Icon={PeopleIcon} title="Friends"/>
 			<SidebarRow Icon={ChatIcon} title="Messenger"/>
 			<SidebarRow Icon={VideoLibraryIcon} title="Videos"/>
+			<p><i>*These sidebar buttons and the header buttons are display only. The posts, comments, and likes are all functioning with Firebase.</i></p>
 		</div>
 	)
 }

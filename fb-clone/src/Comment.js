@@ -16,10 +16,11 @@ function Comment({postID, profilePic, username, message, likedby, commentID}) {
 
 	function clickLike() {
 		const i = likedby.indexOf(user.uid);
+		const post = db.collection('posts').doc(postID);
 		if (i < 0) {
-			db.collection('posts').doc(postID).collection('comments').doc(commentID).update({likedby: [...likedby, user.uid]});
+			post.collection('comments').doc(commentID).update({likedby: [...likedby, user.uid]});
 		} else {
-			db.collection('posts').doc(postID).collection('comments').doc(commentID).update({likedby: likedby.splice(i, i)});
+			post.collection('comments').doc(commentID).update({likedby: likedby.splice(i, i)});
 		}
 	}
 
@@ -30,10 +31,10 @@ function Comment({postID, profilePic, username, message, likedby, commentID}) {
 				<h3>{username}: </h3> &nbsp;
 			</div>
 			<p>{message}</p>
-			<div className={"comment__option" + ( likedby.includes(user.uid) ? " comment__option--active" : "")} onClick={clickLike}>
+		{/*	<div className={"comment__option" + ( likedby.includes(user.uid) ? " comment__option--active" : "")} onClick={clickLike}>
 				<p>{likedby.length}</p> &nbsp;
 				<ThumbUpIcon sx={{width: 20, height: 20}}/>
-			</div>
+			</div> */}
 		</div>
 	)
 }
