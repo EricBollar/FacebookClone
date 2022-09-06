@@ -26,7 +26,7 @@ function Post({profilePic, image, username, timestamp, message, postID, likedby}
 		db.collection('posts').doc(postID).collection('comments').onSnapshot((snapshot) =>
 			setComments(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
 		);
-	})
+	}, [])
 
 	function clickLike() {
 		const i = likedby.indexOf(user.uid);
